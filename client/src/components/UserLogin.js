@@ -17,7 +17,7 @@ function UserLogin() {
       password: password,
     };
     axios
-      .post("http://localhost:3002/userLogin", data)
+      .post("/userLogin", data)
       .then((res) => {
         if (res.data != false) {
           console.log(res.data);

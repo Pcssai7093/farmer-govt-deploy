@@ -7,7 +7,7 @@ function ApplicationsAdminUI() {
   const [render, setRender] = useState(0);
 
   useEffect(() => {
-    axios.get("http://localhost:3002/applications").then((res) => {
+    axios.get("/applications").then((res) => {
       if (res.data != false) {
         setData(res.data);
       } else console.log("applications fetch fail");

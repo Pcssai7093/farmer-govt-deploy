@@ -12,7 +12,7 @@ function CropsUserUI() {
   }
   useEffect(() => {
     axios
-      .get("http://localhost:3002/crops")
+      .get("/crops")
       .then((result) => {
         setData(result.data);
       })

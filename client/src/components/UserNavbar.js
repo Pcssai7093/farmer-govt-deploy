@@ -6,7 +6,7 @@ function UserNavbar() {
   const { userId } = useParams();
   const [userName, setUserName] = useState();
   axios
-    .get(`http://localhost:3002/getUsers/${userId}`)
+    .get(`/getUsers/${userId}`)
     .then((result) => {
       if (result.data != false) setUserName(result.data);
       else {

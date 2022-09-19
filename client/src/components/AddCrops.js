@@ -21,7 +21,7 @@ function AddCrops({ ReRender }) {
     };
     console.log(data);
     axios
-      .post("http://localhost:3002/crops", data)
+      .post("/crops", data)
       .then((result) => {
         if (result.data == true) {
           ReRender();

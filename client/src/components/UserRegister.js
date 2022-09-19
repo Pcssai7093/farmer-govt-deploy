@@ -26,7 +26,7 @@ function UserRegister() {
     setUserData(data);
 
     await axios
-      .post("http://localhost:3002/addUser", data)
+      .post("/addUser", data)
       .then((res) => {
         const userId = res.data;
         if (userId != false) history.push(`/user/home/${userId}`);

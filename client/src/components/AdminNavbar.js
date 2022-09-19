@@ -7,7 +7,7 @@ function AdminNavbar() {
   const { adminId } = useParams();
   const [adminName, setAdminName] = useState();
   axios
-    .get(`http://localhost:3002/getAdmins/${adminId}`)
+    .get(`/getAdmins/${adminId}`)
     .then((result) => {
       if (result.data != false) {
         setAdminName(result.data);

@@ -13,7 +13,7 @@ function Schemes() {
   }
   useEffect(() => {
     axios
-      .get("http://localhost:3002/schemes")
+      .get("/schemes")
       .then((result) => {
         setData(result.data);
       })

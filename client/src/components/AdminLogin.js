@@ -15,7 +15,7 @@ function AdminLogin() {
       password: password,
     };
     axios
-      .post("http://localhost:3002/adminLogin", data)
+      .post("/adminLogin", data)
       .then((res) => {
         // console.log(res.data);
         if (res.data != false) {

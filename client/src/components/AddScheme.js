@@ -21,7 +21,7 @@ function AddScheme({ ReRender }) {
     };
     console.log(data);
     axios
-      .post("http://localhost:3002/schemes", data)
+      .post("/schemes", data)
       .then((result) => {
         if (result.data == true) {
           ReRender();

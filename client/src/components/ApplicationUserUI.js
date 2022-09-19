@@ -6,7 +6,7 @@ function ApplicationUserUI() {
   const { userId } = useParams();
   const [data, setData] = useState();
   useEffect(() => {
-    axios.get(`http://localhost:3002/applications/${userId}`).then((result) => {
+    axios.get(`/applications/${userId}`).then((result) => {
       if (result.data != false) {
         setData(result.data);
       } else {
