@@ -27,11 +27,9 @@ function SchemesUserUI() {
   }, [toRender]);
 
   async function buttonHandler(id) {
-    await axios
-      .get(`http://localhost:3002/${userId}/${id}/apply`)
-      .then((result) => {
-        if (result.data == true) history.push(`/user/application/${userId}`);
-      });
+    await axios.get(`/${userId}/${id}/apply`).then((result) => {
+      if (result.data == true) history.push(`/user/application/${userId}`);
+    });
   }
   return (
     <div className={styles.cont}>
