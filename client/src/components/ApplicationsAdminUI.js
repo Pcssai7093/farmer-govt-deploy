@@ -15,14 +15,12 @@ function ApplicationsAdminUI() {
   }, [render]);
 
   function handleButton(applicationId) {
-    axios
-      .get(`http://localhost:3002/applicationApprove/${applicationId}`)
-      .then((res) => {
-        if (res.data == true) {
-          if (render == 0) setRender(1);
-          else setRender(0);
-        }
-      });
+    axios.get(`/applicationApprove/${applicationId}`).then((res) => {
+      if (res.data == true) {
+        if (render == 0) setRender(1);
+        else setRender(0);
+      }
+    });
   }
   return (
     <div className={styles.cont}>
